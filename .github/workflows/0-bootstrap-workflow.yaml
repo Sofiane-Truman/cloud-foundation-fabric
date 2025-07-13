@@ -53,11 +53,11 @@ jobs:
 
       # set up SSH key authentication to the modules repository
 
-      - id: ssh-config
-        name: Configure SSH authentication
-        run: |
-          ssh-agent -a "$SSH_AUTH_SOCK" > /dev/null
-          ssh-add - <<< "${{ secrets.CICD_MODULES_KEY }}"
+#      - id: ssh-config
+#        name: Configure SSH authentication
+#        run: |
+#          ssh-agent -a "$SSH_AUTH_SOCK" > /dev/null
+#          ssh-add - <<< "${{ secrets.CICD_MODULES_KEY }}"
 
       # set up step variables for plan / apply
 
